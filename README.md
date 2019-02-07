@@ -168,7 +168,7 @@ What happened?  Babel!!
 
 1.  Unhide **devServer** key in **webpack.config.js**
 
-2.   Add the following code to the **package.json scripts key:
+2.   Add the following code to the **package.json** scripts key:
     ```
     "start": "npm run devServer",
     "build": "webpack --config webpack.config.js",

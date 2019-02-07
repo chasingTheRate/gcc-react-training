@@ -97,7 +97,9 @@
 ## First React File
 
 1.  Create ```src``` directory
+
 2.  Create **App.jsx** file inside **src** directory
+
 3.  Insert the following code:
 
   ```
@@ -119,6 +121,7 @@
 ## Index.html and Package.json
 
 4.  Create **index.html** file
+
 5.  Insert the following code into **index.html**
     ```
     <!DOCTYPE html>
@@ -134,6 +137,7 @@
       </body>
     </html>
     ```
+    
 6.  Update **package.json**
     *  Add the following script:
     ```
@@ -169,6 +173,7 @@ What happened?  Babel!!
 1.  Unhide **devServer** key in **webpack.config.js**
 
 2.   Add the following code to the **package.json** scripts key:
+
     ```
     "start": "npm run devServer",
     "build": "webpack --config webpack.config.js",

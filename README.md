@@ -146,39 +146,39 @@
   
 ## First Build
 
-1.  ```npm run build```
+1.    ```npm run build```
 
-What happened?  Babel!!
+      What happened?  Babel!!
 
-2.  Unhide rules under module:
+2.    Unhide rules under module:
 
-    ```
-    module: {
-      // rules: [
-      //   {
-      //     test: /\.(js|jsx)$/,
-      //     exclude: /(node_modules|bower_components)/,
-      //     loaders: ['babel-loader'],
-      //   },
-      // ],
-    },
-    ```
-3.  What happened/Where did the build go?
-    *  **bundle.js** in **dist** folder.
+       ```
+       module: {
+         // rules: [
+         //   {
+         //     test: /\.(js|jsx)$/,
+         //     exclude: /(node_modules|bower_components)/,
+         //     loaders: ['babel-loader'],
+         //   },
+         // ],
+       },
+       ```
+3.    What happened/Where did the build go?
+      *  **bundle.js** in **dist** folder.
 
-4.  How do we view the react app with a server to serve the files? **A: webpack-dev-server**
+4.    How do we view the react app with a server to serve the files? **A: webpack-dev-server**
 
 ## Webpack Dev Server
 
-1.  Unhide **devServer** key in **webpack.config.js**
+1.    Unhide **devServer** key in **webpack.config.js**
 
-2.   Add the following code to the **package.json** scripts key:
+2.    Add the following code to the **package.json** scripts key:
 
-    ```
-    "start": "npm run devServer",
-    "build": "webpack --config webpack.config.js",
-    "devServer": "webpack-dev-server --config webpack.config.js --open --hot --inline"
-    ```
+      ```
+      "start": "npm run devServer",
+      "build": "webpack --config webpack.config.js",
+      "devServer": "webpack-dev-server --config webpack.config.js --open --hot --inline"
+      ```
  
-3.  ```npm start```
+3.    ```npm start```
         

@@ -135,5 +135,73 @@ For consistency we'll adhere to the following guide for file naming convention:
     <input onChange={this.handleChange} placeholder="Enter something..."></input>
     ```
 4. Go to browser and enter any text in the input box.  Look at the console?  What do you see?  Why?
+5.  Add ```this.handleChange = this.handleChange.bind(this);``` to constructor.
+
+## Pass Functions to Child Components as Props:
+
+1.  In **ParentComponent.jsx**, add the following function:
+    ```
+    handleClick(e){
+        this.setState({
+          message: 'Welcome Team Shelby!'
+        })
+    }
+    ```
+2.  In **ParentComponent.jsx**, add `this.handleClick = this.handleClick.bind(this);` in the constructor.
+3.  In **ParentComponent.jsx** add a handleClick attribute to ChildComponent:
+
+    ```
+    <ChildComponent handleClick={ this.handleClick } message={ this.state.message }></ChildComponent>
+    ```
+4.  In **ChildComponent.jsx, change
+
+    ```
+    const message = this.props.message || 'Message Not Found';
+    ```
+    to
+    ```
+    const { message, handleClick } = this.props;
+    ```
+5.  In **ChildComponent.jsx**, add an onClick handle to the button:
+    ```
+    <button onClick={handleClick}>{ message }</button>
+    ```
+
+## Conditional Rendering
+
+1.  In **ParentComponent.jsx** update state to:
+    ```
+    this.state = {
+      message: "Welcome Team Shelby (from state)",
+      show: true
+    }
+    ```
+2.  In **ParentComponent.jsx** add new function:
+    ```
+    showChildComponent(){
+        console.log(this.state.show);
+        this.setState({
+          show: !this.state.show
+        })
+    }
+    ```
+3.  In **ParentComponent** bind this to new function: `this.showChildComponent = this.showChildComponent.bind(this);`
+4.  In **ParentComponent.jsx** add button to render():
+    ```
+    render() {
+        return (
+          <div>
+            <input onChange={this.handleChange} placeholder="Enter something..."></input>
+            <ChildComponent handleClick={ this.handleClick } message={ this.state.message }></ChildComponent>
+            <button onClick={this.showChildComponent}>Show/Hide</button>
+          </div>
+        );
+    }
+    ```
+5.  In **ParentComponent.jsx
+
+
+
+    
     
   

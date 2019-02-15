@@ -205,6 +205,18 @@ For consistency we'll adhere to the following guide for file naming convention:
     }
     ```
     
+##  Render Lists
+
+1.  Replace the code in the inline logical operator brace with:
+    ```
+    {this.state.list.map(item => {
+          return <ChildComponent key={item} handleClick={ this.handleClick } message={ this.state.message }>                </ChildComponent>
+        })
+        }
+    ```
+
+
+    
 
 
 

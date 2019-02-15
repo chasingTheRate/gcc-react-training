@@ -153,7 +153,7 @@ For consistency we'll adhere to the following guide for file naming convention:
     ```
     <ChildComponent handleClick={ this.handleClick } message={ this.state.message }></ChildComponent>
     ```
-4.  In **ChildComponent.jsx, change
+4.  In **ChildComponent.jsx**, change
 
     ```
     const message = this.props.message || 'Message Not Found';
@@ -185,8 +185,8 @@ For consistency we'll adhere to the following guide for file naming convention:
         })
     }
     ```
-3.  In **ParentComponent** bind this to new function: `this.showChildComponent = this.showChildComponent.bind(this);`
-4.  In **ParentComponent.jsx** add button to render():
+3.  In **ParentComponent** bind _this_ to new function: `this.showChildComponent = this.showChildComponent.bind(this);`
+4.  In **ParentComponent.jsx** add button to render() with _onClick_ attribute:
     ```
     render() {
         return (
@@ -198,7 +198,13 @@ For consistency we'll adhere to the following guide for file naming convention:
         );
     }
     ```
-5.  In **ParentComponent.jsx
+5.  In **ParentComponent.jsx**, wrap ChildComponent in inline logical operator brace:
+    ```
+    {this.state.show &&
+          <ChildComponent handleClick={ this.handleClick } message={ this.state.message }></ChildComponent>
+    }
+    ```
+    
 
 
 

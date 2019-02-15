@@ -32,12 +32,12 @@ For consistency we'll adhere to the following guide for file naming convention:
 
     export default ParentComponent;
     ```
-3.  Import ParentController in **App.jsx**
+3.  Import ParentComponent in **App.jsx**
 
     ```
-    import ParentController from './ParentComponent';
+    import ParentComponent from './ParentComponent';
     ```
-4.  Replace ```<div>Hello Team Shelby!</div>``` with ```<ParentController></ParentController>``` in **App.jsx**
+4.  Replace ```<div>Hello Team Shelby!</div>``` with ```<ParentComponent></ParentComponent>``` in **App.jsx**
 5.  Run ```npm start```.  You should see "Welcome Team Shelby" in the browser.
 
 ## Create Child Component
